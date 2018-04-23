@@ -33,7 +33,7 @@ from arcpy import env
 env.workspace = "C:/Users/saman/Desktop/GEOG 565/Assignment 3"
 env.overwriteOutput = True
 
-contourInterval = arcpy.GetParameterAsText(0)
+contourInterval = int(arcpy.GetParameterAsText(0))
 
 if arcpy.CheckExtension("Spatial") == "Available":
     arcpy.CheckOutExtension("Spatial")
